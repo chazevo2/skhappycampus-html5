@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<h3>회원 기본정보를 입력해주세요. (* 필수입력항목)</h3>
+
+	<form action="login_homework.html" method="post">
+		<table border="1" cellpadding="10" cellspacing="3">
+			<tr>
+				<td>이름 *</td>
+				<td><input type="text" name="memberName" > <input type="hidden" name="grade" value="일반회원"></td>
+			</tr>
+			<tr>
+				<td>아이디 *</td>
+				<td><input type="text" name="memberId" value="아이디 또는 이메일"> <input type="button" value="아이디 중복확인"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 *</td>
+				<td><input type="password" name="memberPw"><br>영문, 숫자, 특수문자( ( ) < > " ' 제외)중 2종류를 조합하여 10~16자리 (3종류는 8~16자리)로 구성할 수 있습니다.</td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인 *</td>
+				<td><input type="password" name="memberPwCheck"></td>
+			</tr>
+			<tr>
+				<td>이메일 *</td>
+				<td><input type="text" name="memberEmail1">@<input type="text" name="memberEmail2">
+					<select name="emailAddress">
+						<option>직접입력</option>
+						<option>naver.com</option>
+						<option>gmail.com</option>
+						<option>daum.net</option>
+						<option>empal.com</option>
+					</select><br>* 실제 사용중인 이메일 주소가 아니면 비밀번호 분실 시 찾을 수 없습니다.
+				</td>
+			</tr>
+			<tr>
+				<td>핸드폰/패드/태블릿 등록</td>
+				<td>
+					<input type="radio" name="device" value="없음" checked>없음&nbsp;&nbsp;
+					<input type="radio" name="device" value="핸드폰">핸드폰&nbsp;&nbsp;
+					<input type="radio" name="device" value="패드/태블릿">패드/태블릿&nbsp;&nbsp;
+					<input type="radio" name="device" value="법인핸드폰">법인핸드폰&nbsp;&nbsp;
+					<input type="radio" name="device" value="법인패드/태블릿">법인패드/태블릿&nbsp;&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td>휴대폰번호 *</td>
+				<td>
+					<select name="telecom">
+						<option>SK</option>
+						<option>KT</option>
+						<option>LG U+</option>
+					</select>
+					<select name="moblie1">
+						<option>010</option>
+						<option>011</option>
+						<option>016</option>
+						<option>017</option>
+						<option>018</option>
+						<option>019</option>
+					</select>&nbsp;-
+					<input type="text" name="mobile2">&nbsp;-
+					<input type="text" name="mobile3">
+					<input type="button" value="인증번호 받기">
+					<br>
+					* 본인명의 핸드폰번호 입력해주세요.
+				</td>
+			</tr>
+			<tr>
+				<td>메일 수신동의</td>
+				<td>
+					<input type="radio" name="emailCheck" value="수신함">수신함&nbsp;&nbsp;
+					<input type="radio" name="emailCheck" value="수신하지않음" checked>수신하지않음&nbsp;&nbsp; * 이벤트 최신 핸드폰, 혜택정보를 손쉽게 받아보실 수 있습니다.
+				</td>
+			</tr>
+			<tr>
+				<td>SMS 수신동의</td>
+				<td>
+					<input type="radio" name="smsCheck" value="수신함">수신함&nbsp;&nbsp;
+					<input type="radio" name="smsCheck" value="수신하지않음" checked>수신하지않음&nbsp;&nbsp; * 이벤트 최신 핸드폰, 혜택정보를 손쉽게 받아보실 수 있습니다.
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="회원가입">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

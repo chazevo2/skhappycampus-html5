@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>입력양식 예제</title>
+</head>
+<body>
+	<h3>입력양식</h3>
+	<!-- form : name="" action="요청처리 / #(현재페이지)" -->
+	<!-- 
+		get 요청 : 
+			=> url?key=요청데이터&key=데이터 
+			=> 길이 255자 이내, 보안 취약, 검색요청
+			ex)http://localhost:8070/sample/form_sample.html?memberId=abc&memberPw=abc&grade=%EC%9D%BC%EB%B0%98%ED%9A%8C%EC%9B%90&gender=%EB%82%A8&hobby=Java%EA%B3%B5%EB%B6%80&hobby=html%EA%B3%B5%EB%B6%80&hobby=%EB%A7%9B%EC%A7%91&moblie1=010&mobile2=1234&mobile3=1234#
+		post 요청 : 
+			=> 요청데이타가 body에 첨부되어 전송
+			=> 길이 제한 없음, 사용자가 볼 수 없음, 보안데이터 전송
+			ex)http://localhost:8070/sample/form_sample.html#
+	-->
+	<form action="#" method="post">
+		아이디:<input type="text" name="memberId"><br>
+		비밀번호:<input type="password" name="memberPw"><br>
+		<input type="hidden" name="grade" value="일반회원">
+		
+		<!-- radio : 단일 선택 -->
+		성별:
+		<input type="radio" name="gender" value="남">남&nbsp;&nbsp;
+		<input type="radio" name="gender" value="여">여<br>
+		
+		<!-- checkbox : 다중 선택 -->
+		취미:
+		<input type="checkbox" name="hobby" value="Java공부" checked>Java&nbsp;&nbsp;
+		<input type="checkbox" name="hobby" value="html공부" checked>Html&nbsp;&nbsp;
+		<input type="checkbox" name="hobby" value="여행">여행&nbsp;&nbsp;
+		<input type="checkbox" name="hobby" value="맛집">맛집&nbsp;&nbsp;
+		<input type="checkbox" name="hobby" value="스포츠">스포츠&nbsp;&nbsp;
+		<input type="checkbox" name="hobby" value="음악감상">음악감상<br>
+		
+		전화번호:
+		<select name="moblie1">
+			<option>010</option>
+			<option>011</option>
+			<option>016</option>
+			<option>017</option>
+			<option>018</option>
+			<option>019</option>
+		</select>-
+		<input type="text" name="mobile2">-
+		<input type="text" name="mobile3"><br>
+		
+		<!-- 여러줄 텍스트 -->
+		자기소개:
+		<textarea name="" cols="200" rows="5">자기소개 200자 이내로 작성해주세요.</textarea><p>
+		
+		<input type="submit" value="요청전용버튼(OK)">
+		<input type="reset" value="취소전용버튼(CANCLE)">
+	</form>
+</body>
+</html>
